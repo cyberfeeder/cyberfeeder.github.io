@@ -3,7 +3,6 @@ author:
   name: 
   email:
 description: > # this means to ignore newlines until "show_excerpts:"
-  The site is a collection of notes and tutorial like-posts. There is no theme in the content besides programming and computer science topics.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
