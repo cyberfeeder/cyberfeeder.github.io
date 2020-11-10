@@ -66,4 +66,5 @@ of the program in WinDbg, we get the following message.
 
 This shows us an invalid address that does make sense.
 Here the address that we're not allowed to read from is `0x11223344556677B0`.
-So again, why didn't the Visual Studio debugger show the same message?
+
+**So again, why didn't the Visual Studio debugger show the same message?**
