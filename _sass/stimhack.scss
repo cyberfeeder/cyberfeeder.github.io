@@ -24,7 +24,7 @@ article {
     padding: 4.2360679775vw 2.61803398875vw;
 }
 
-li {
+nav ol li {
     margin: 0.80901699437vw 0vw;
 
     font-family: "Space Mono", monospace;
@@ -32,7 +32,7 @@ li {
     list-style-type: none;
 }
 
-li::marker {
+nav ol li::marker {
     display: none;
 }
 
