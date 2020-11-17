@@ -1,0 +1,86 @@
+body {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.61803398875vw;
+
+    line-height: 2.61803398875vw;
+
+    text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 767.98px) {
+    body {
+        font-size: 2.61803398875vw;
+
+        line-height: 4.2360679775vw;
+    }
+
+    h1.display-1 {
+        font-size: 6.85410196625vw;
+    }
+}
+
+article {
+    margin: 0vw auto;
+    padding: 4.2360679775vw 2.61803398875vw;
+}
+
+li {
+    margin: 0.80901699437vw 0vw;
+
+    font-family: "Space Mono", monospace;
+
+    list-style-type: none;
+}
+
+li::marker {
+    display: none;
+}
+
+p {
+    margin: 2.61803398875vw 0vw;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+
+    margin: 0vw auto;
+}
+
+figure {
+    margin: 0vw;
+    padding: 0vw;
+}
+
+code {
+    color: black;
+    background-color: rgb(240, 240, 240);
+
+    font-family: "Space Mono", monospace;
+}
+
+pre {
+    display: block;
+
+    margin: 0vw;
+    padding: 2.61803398875vw;
+
+    background-color: black;
+}
+
+pre code {
+    color: white;
+    background-color: transparent;
+}
+
+blockquote {
+    padding: 0.80901699437vw;
+
+    border: thin solid black;
+
+    font-style: italic;
+
+    p {
+        margin: 0vw;
+    }
+}

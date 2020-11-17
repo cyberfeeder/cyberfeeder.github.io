@@ -1,0 +1,11 @@
+{% if site.posts.size > 0 %}
+<nav>
+    <ol class="p-0">
+        {% for post in site.posts %}
+        <li>
+            <a class="text-lowercase" href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ol>
+</nav>
+{% endif %}

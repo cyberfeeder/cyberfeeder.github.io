@@ -2,23 +2,18 @@
 layout: default
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<nav>
+    <ol class="breadcrumb bg-transparent pl-0">
+        <li class="breadcrumb-item">
+            <a href="{{ site.url }}">..</a>
+        </li>
 
-<div class="container">
-  <h1>404</h1>
+        <li class="breadcrumb-item active">
+            <a href="#">404</a>
+        </li>
+    </ol>
+</nav>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<p>
+    The requested page could not be found.
+</p>

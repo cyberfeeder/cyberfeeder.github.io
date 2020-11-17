@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    minima (2.5.0)
+    stimhack (0.1.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
@@ -79,7 +79,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
-  minima!
+  stimhack!
 
 BUNDLED WITH
    1.17.3
