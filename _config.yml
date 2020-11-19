@@ -1,13 +1,18 @@
 title: Stimhack
+
 author:
   name: Stimhack
   email: run@stimhack.sh
+
 description: >
+
+favicon: favicon.png
+
+theme: stimhack
 
 show_excerpts: false
 
-theme: stimhack
-favicon: favicon.png
+highlighter: rouge
 
 plugins:
  - jekyll-feed
