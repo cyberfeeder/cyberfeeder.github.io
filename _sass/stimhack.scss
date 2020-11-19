@@ -85,9 +85,11 @@ p {
 
 img {
     display: block;
-    max-width: 100%;
+
+    width: 100%;
 
     margin: 0vw auto;
+    padding: 0vw;
 }
 
 figure {
