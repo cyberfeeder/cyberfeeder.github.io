@@ -1,27 +1,70 @@
-body {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 1.61803398875vw;
+$golden-number: 1.61803398875;
 
-    line-height: 2.61803398875vw;
+$minimum-viewport-width: 48rem;
+$maximum-viewport-width: 75rem;
 
-    text-rendering: optimizeLegibility;
+@function remove-unit($value)
+{
+    @return $value / (0.0 * $value + 1.0);
 }
 
-@media (max-width: 767.98px) {
-    body {
-        font-size: 2.61803398875vw;
+@function raise($base, $exponent)
+{
+    $result: 1.0;
 
-        line-height: 4.2360679775vw;
+    @for $i from 1 through $exponent {
+      $result: $result * $base;
     }
 
-    h1.display-1 {
-        font-size: 6.85410196625vw;
+    @return $result;
+}
+
+@function generate-interpolator($minimum-value, $maximum-value)
+{
+    @if unit($minimum-viewport-width) != unit($maximum-viewport-width) {
+        @error "Specified viewport widths must have the same unit.";
+    } @else if unit($minimum-value) != unit($maximum-value) {
+        @error "Specified values must have the same unit.";
     }
+
+    $a: remove-unit($maximum-value - $minimum-value);
+    $b: remove-unit($maximum-viewport-width - $minimum-viewport-width);
+
+    @return calc(#{$minimum-value} + #{$a} * (100vw - #{$minimum-viewport-width}) / #{$b});
+}
+
+@mixin responsive-interpolation($property, $minimum-value, $maximum-value)
+{
+    & {
+        #{$property}: $minimum-value;
+
+        @media (min-width: $minimum-viewport-width) {
+            #{$property}: generate-interpolator($minimum-value, $maximum-value);
+        }
+
+        @media (min-width: $maximum-viewport-width) {
+            #{$property}: $maximum-value;
+        }
+    }
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+
+    line-height: 2em;
+
+    text-rendering: optimizeLegibility;
+
+    @include responsive-interpolation("font-size", 1rem, $golden-number * 1rem);
 }
 
 article {
     margin: 0vw auto;
     padding: 4.2360679775vw 2.61803398875vw;
+}
+
+header h1.display-1 {
+    font-size: raise($golden-number, 3) * 1em;
 }
 
 nav ol li {
