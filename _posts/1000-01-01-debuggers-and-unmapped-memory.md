@@ -73,9 +73,9 @@ This shows us an invalid address that does make sense. Here the address that we'
 ### So, why didn't the Visual Studio debugger show the same message?
 
 Trying to invalid memory at lower addresses does not seem to be a problem for the VS debugger. After messing around with
-some addresses, it seems the crossing point is at `0x0000800000000000`. At lower addresses, Visual Studio shows the right address
-in the exception window. At addresses higher then  `0x0000800000000000`, we get that `0xFFFFFFFFFFFFFFFF` address
-anomaly.
+some addresses, it seems the crossing point is at `0x0000800000000000`. At lower addresses, Visual Studio shows the
+right address in the exception window. At addresses higher then  `0x0000800000000000`, we get that `0xFFFFFFFFFFFFFFFF`
+address anomaly.
 
 There is a cue about this in the MSDN documentation. [This page][1] tells us that the most virtual memory a 64-bit
 the process can have is `128 TB`. We'll assume that TB is in fact tebibyte. `128 TB` is `140737500000000` bytes.
