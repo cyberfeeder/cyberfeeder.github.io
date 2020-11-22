@@ -107,7 +107,7 @@ This program reads a single byte at address `0x8000000000`. Running the program 
 that we expect from earlier. We get the access violation error message, and the expected address as `0xFF...`.
 
 We now make another program that launches `CrashingProgram.exe` and attach to it. We call this new program
-`debugger.exe`. [This gist][1] contains the full program. `debugger.exe` uses the functions provided by WinAPI to
+`debugger.exe`. [This gist][2] contains the full program. `debugger.exe` uses the functions provided by WinAPI to
 receive debug events. Using a custom program, we can get to know the exception details passed by Windows. Windows will
 throw a bunch of debug events during normal execution.  The `debugger` program ingores most of the debugging events.
 The only event that we do care about are access violation exceptions. In case you're curious, [this page][3] lists the
