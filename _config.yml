@@ -8,8 +8,6 @@ description: >
 
 favicon: favicon.png
 
-theme: stimhack
-
 show_excerpts: false
 
 highlighter: rouge
